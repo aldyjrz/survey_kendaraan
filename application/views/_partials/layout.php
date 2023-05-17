@@ -6,9 +6,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="main-wrapper main-wrapper-1">
       <div class="navbar-bg"></div>
       <nav class="navbar navbar-expand-lg main-navbar">
-        
+      <a href="#" class="nav-link text-lg" data-toggle="sidebar"><i class="fas fa-bars fw-bold mt-3 text-lg"></i></a>
+
         <ul class="navbar-nav navbar-right float-right ml-auto">
-           
+
           <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
             <div class="dropdown-menu dropdown-list dropdown-menu-right">
               <div class="dropdown-header">Notifications

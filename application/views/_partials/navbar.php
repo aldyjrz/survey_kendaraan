@@ -2,9 +2,11 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
       <nav class="navbar navbar-secondary navbar-expand-lg">
+        
         <div class="container">
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
+              
               <a href="#" data-toggle="dropdown" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
               <ul class="dropdown-menu">
                 <li class="nav-item"><a href="<?php echo base_url(); ?>dist/index_0" class="nav-link">General Dashboard</a></li>
