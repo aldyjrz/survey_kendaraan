@@ -13,6 +13,12 @@ class Home extends CI_Controller
 		$data = array(
 			'title' => "Survey Kendaraan"
 		);
-		$this->load->view('index', $data);
+		if ($this->session->level == "admin") {
+			redirect('admin/Home');
+		} else {
+
+
+			$this->load->view('index', $data);
+		}
 	}
 }

@@ -59,7 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <i class="fas fa-bell"></i>
                   </div>
                   <div class="dropdown-item-desc">
-                    Welcome to Stisla template!
+                    Welcome to STISLA template!
                     <div class="time">Yesterday</div>
                   </div>
                 </a>

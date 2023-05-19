@@ -1,54 +1,67 @@
 
 <?php defined('BASEPATH') or exit('No direct script access allowed');
-
-class auth extends CI_Controller
+/**
+ *  @property Auth  $this->load
+ */
+class Auth extends CI_Controller
 {
 
     function __construct()
     {
-        parent::__construct();
-        $this->load->model('Model_users');
-     }
 
+        parent::__construct();
+        //LOAD MODEL DARI CONSTRUCTOR AUTH
+        $this->load->model('Model_users');
+    }
+
+
+    //FUNGSI LOGIN
     function login()
     {
-        if (isset($_POST['submit'])) {
+        if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
             // proses login disini
-            $username   =   $this->input->post('username');
-            $password   =   $this->input->post('password');
-            $hasil      =   $this->Model_users->login($username, $password);
-            if ($hasil == 1) {
+            $username   =    $this->input->post('username', TRUE);
+            $password   =   $this->input->post('password', TRUE);
 
-                $ceckk      =  $this->Model_users->ceck($username, $password)->result();
-                // echo $ceckk[0]->id_cabang;
-                // die;
 
-                // update last login
-                $this->db->where('username', $username);
-                $this->db->update('users', array('last_login' => date('Y-m-d H:i:s')));
-                // $this->session->set_userdata(array('status_login'=>'oke','username'=>$username));
+
+            $getUser      =  $this->Model_users->getUser($username, $password)->result();
+            if ($getUser != null) {
+
+
+
+                //simpan session untuk pengecekan login dan memudahkan pengambilan data
                 $session = array(
-                    'id_user'  => $ceckk[0]->id_user,
+                    'id_user'  => $getUser[0]->id_user,
                     'username'  => $username,
-                    'nama_lengkap'  => $ceckk[0]->nama_lengkap,
-                    'id_cabang'  => $ceckk[0]->id_cabang,
-                    'level'  => $ceckk[0]->level,
+                    'nama_lengkap'  => $getUser[0]->nama_lengkap,
+                    'level'  => $getUser[0]->level,
                     'status_login' => 'oke',
                 );
+                
                 $this->session->set_userdata($session);
-                if ($$ceckk[0]->id_cabang == 0) {
-                    redirect('admin/dashboard');
+
+                //jika level admin, maka ke dashboard
+                if ($getUser[0]->level == "admin") {
+                    redirect('admin/Home');
                 } else {
-                    redirect('dashboard');
+                    redirect('Home');
                 }
+
+                //jika user tidak ditemukan
             } else {
+                $this->session->set_flashdata("message", "User Tidak ditemukan!!");
                 redirect('auth/login');
             }
+
+            //jika request method bukan POST makan tampilkan auth-login
         } else {
-            //$this->load->view('form_login2');
-            chek_session_login();
-            $this->load->view('form_login');
+            $data = array(
+                'title' => "Survey Kendaraan - LOGIN"
+            );
+
+            $this->load->view('auth-login', $data);
         }
     }
 

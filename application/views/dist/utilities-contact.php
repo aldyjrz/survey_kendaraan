@@ -9,7 +9,7 @@ $this->load->view('dist/_partials/header');
         <div class="row">
           <div class="col-12 col-md-10 offset-md-1 col-lg-10 offset-lg-1">
             <div class="login-brand">
-              Stisla
+              STISLA
             </div>
 
             <div class="card card-primary">
@@ -61,7 +61,7 @@ $this->load->view('dist/_partials/header');
               </div>
             </div>
             <div class="simple-footer">
-              Copyright &copy; Stisla 2018
+              Copyright &copy; STISLA 2018
             </div>
           </div>
         </div>

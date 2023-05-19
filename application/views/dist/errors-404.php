@@ -37,7 +37,7 @@ $this->load->view('dist/_partials/header');
           </div>
         </div>
         <div class="simple-footer mt-5">
-          Copyright &copy; Stisla 2018
+          Copyright &copy; STISLA 2018
         </div>
       </div>
     </section>

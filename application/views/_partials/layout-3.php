@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="main-wrapper container">
       <div class="navbar-bg"></div>
       <nav class="navbar navbar-expand-lg main-navbar">
-        <a href="<?php echo base_url(); ?>dist/index" class="navbar-brand sidebar-gone-hide">Stisla</a>
+        <a href="<?php echo base_url(); ?>dist/index" class="navbar-brand sidebar-gone-hide">STISLA</a>
         <a href="#" class="nav-link sidebar-gone-show" data-toggle="sidebar"><i class="fas fa-bars"></i></a>
         <div class="nav-collapse">
           <a class="sidebar-gone-show nav-collapse-toggle nav-link" href="#">
@@ -39,7 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <a href="#" class="search-close"><i class="fas fa-times"></i></a>
               </div>
               <div class="search-item">
-                <a href="#">#Stisla</a>
+                <a href="#">#STISLA</a>
                 <a href="#" class="search-close"><i class="fas fa-times"></i></a>
               </div>
               <div class="search-header">
@@ -71,7 +71,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <div class="search-icon bg-danger text-white mr-3">
                     <i class="fas fa-code"></i>
                   </div>
-                  Stisla Admin Template
+                  STISLA Admin Template
                 </a>
               </div>
               <div class="search-item">
@@ -201,7 +201,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <i class="fas fa-bell"></i>
                   </div>
                   <div class="dropdown-item-desc">
-                    Welcome to Stisla template!
+                    Welcome to STISLA template!
                     <div class="time">Yesterday</div>
                   </div>
                 </a>

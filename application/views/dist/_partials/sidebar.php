@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="<?php echo base_url(); ?>">Stisla</a>
+            <a href="<?php echo base_url(); ?>">STISLA</a>
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
             <a href="<?php echo base_url(); ?>">St</a>
@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </li>
             <li class="<?php echo $this->uri->segment(2) == 'lap_survey' ? 'active' : ''; ?>"><a class="nav-link" href="<?php echo base_url(); ?>lap_survey"> <i class="fas fa-th"></i> <span>Laporan Survey</span></a></li>
             
-            <li class="menu-header">Stisla</li>
+            <li class="menu-header">SURVEY KENDARAAN</li>
             <li class="dropdown <?php echo $this->uri->segment(2) == 'components_article' || $this->uri->segment(2) == 'components_avatar' || $this->uri->segment(2) == 'components_chat_box' || $this->uri->segment(2) == 'components_empty_state' || $this->uri->segment(2) == 'components_gallery' || $this->uri->segment(2) == 'components_hero' || $this->uri->segment(2) == 'components_multiple_upload' || $this->uri->segment(2) == 'components_pricing' || $this->uri->segment(2) == 'components_statistic' || $this->uri->segment(2) == 'components_tab' || $this->uri->segment(2) == 'components_table' || $this->uri->segment(2) == 'components_user' || $this->uri->segment(2) == 'components_wizard' ? 'active' : ''; ?>">
               <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-large"></i> <span>Components</span></a>
               <ul class="dropdown-menu">
@@ -125,7 +125,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </ul>
 
           <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
-            <a href="https://getstisla.com/docs" class="btn btn-primary btn-lg btn-block btn-icon-split">
+            <a href="https://getSURVEY KENDARAAN.com/docs" class="btn btn-primary btn-lg btn-block btn-icon-split">
               <i class="fas fa-rocket"></i> Documentation
             </a>
           </div>

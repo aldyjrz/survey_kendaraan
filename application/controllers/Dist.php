@@ -7,11 +7,17 @@ class Dist extends CI_Controller {
 		parent::__construct();
 		chek_session();
 	}
-	public function index() {
+	public function index()
+	{
 		$data = array(
-			'title' => "Ecommerce Dashboard"
+			'title' => "Survey Kendaraan"
 		);
-		$this->load->view('dist/index', $data);
+		if ($this->session->level == "admin") {
+			redirect('admin/Home');
+		} else {
+			redirect('Home');
+		}
+ 
 	}
 
 	public function index_0() {
