@@ -135,14 +135,12 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
 <!-- /END GA --></head>
 
 <?php
-if ($this->uri->segment(2) == "layout_transparent") {
-  $this->load->view('_partials/layout-2');
-  $this->load->view('_partials/sidebar-2');
-}elseif ($this->uri->segment(2) == "layout_top_navigation") {
-  $this->load->view('_partials/layout-3');
-  $this->load->view('_partials/navbar');
-}elseif ($this->uri->segment(2) != "auth_login" && $this->uri->segment(2) != "auth_forgot_password"&& $this->uri->segment(2) != "auth_register" && $this->uri->segment(2) != "auth_reset_password" && $this->uri->segment(2) != "errors_503" && $this->uri->segment(2) != "errors_403" && $this->uri->segment(2) != "errors_404" && $this->uri->segment(2) != "errors_500" && $this->uri->segment(2) != "utilities_contact" && $this->uri->segment(2) != "utilities_subscribe") {
+  if ($this->uri->segment(2) != "login" ) {
   $this->load->view('_partials/layout');
   $this->load->view('_partials/sidebar');
+}
+elseif ($this->uri->segment(2) == "login") {
+  //$this->load->view('_partials/layout');
+  //$this->load->view('_partials/sidebar');
 }
 ?>

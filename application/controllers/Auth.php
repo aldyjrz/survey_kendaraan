@@ -35,7 +35,7 @@ class Auth extends CI_Controller
                 $session = array(
                     'id_user'  => $getUser[0]->id_user,
                     'username'  => $username,
-                    'nama_lengkap'  => $getUser[0]->nama_lengkap,
+                    'nama_lengkap'  => $getUser[0]->nama,
                     'level'  => $getUser[0]->level,
                     'status_login' => 'oke',
                 );
