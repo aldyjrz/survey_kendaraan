@@ -24,10 +24,8 @@ class Model_gejala extends CI_Model{
   
     function getAll()
     {
-        $this->db->select('*');
-        $this->db->from('tbl_kerusakan');
-        $this->db->join('tbl_gejala', 'tbl_gejala.kode_kerusakan = tbl_kerusakan.kode_kerusakan');
-        $query = $this->db->get();
+        $query =   $this->db->query('select * from tbl_gejala  LEFT JOIN tbl_kerusakan  ON tbl_gejala.kode_kerusakan = tbl_kerusakan.kode_kerusakan LEFT JOIN tbl_penyebab  ON tbl_gejala.kode_penyebab = tbl_penyebab.kode_penyebab');
+       
         return $query;
      }
     

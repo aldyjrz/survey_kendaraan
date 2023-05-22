@@ -68,6 +68,28 @@ $this->load->view('_partials/header');
 
                     </select>
                   </div>
+                  <div class="form-group col-md-6">
+                    <label>Penyebab</label>
+                    <select name="kode_penyebab" required class="form-control">
+                      <option value=""> -- Pilih -- </option>
+
+                      <?php
+                         foreach($penyebab as $bab){
+
+                          if($record[0]->kode_penyebab == $bab->kode_penyebab){
+                            $s = "selected";
+                          }else{
+                            $s= "";
+                          }
+                          ?>
+                      <option <?= $s ?> value="<?=$bab->kode_penyebab?>"> <?=$bab->kode_penyebab?> -<?=$bab->penyebab?> </option>
+
+                          <?php
+                        }
+                      ?>
+
+                    </select>
+                  </div>
             </div>
 
             <div class="form-group col-md-6">

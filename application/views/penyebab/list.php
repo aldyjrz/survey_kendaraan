@@ -53,7 +53,7 @@ $this->load->view('_partials/header');
 
                         <td><?= $dat->penyebab ?></td>
  
-                        <td>  <a href="<?= base_url("Admin/Penyebab/edit/" . $dat->id_penyebab) ?>" class="btn btn-warning">Edit</a> <a href="<?= base_url("Admin/Penyebab/delete/" . $dat->id_penyebab) ?>" class="btn btn-danger">Delete</a></td>
+                        <td>  <a href="<?= base_url("Admin/Penyebab/edit/" . $dat->id_penyebabs) ?>" class="btn btn-warning">Edit</a> <a href="<?= base_url("Admin/Penyebab/delete/" . $dat->id_penyebab) ?>" class="btn btn-danger">Delete</a></td>
 
                       </tr>
                     <?php } ?>

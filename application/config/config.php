@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost/survey_kendaraan/';
-$config['default_controller'] = 'Home';
+$config['default_controller'] = 'Survey';
 
 /*
 |--------------------------------------------------------------------------

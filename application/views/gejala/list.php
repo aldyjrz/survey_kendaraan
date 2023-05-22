@@ -34,6 +34,8 @@ $this->load->view('_partials/header');
                       <th>Kode Gejala</th>
                       <th>Gejala</th>
                       <th>Kerusakan</th>
+                      <th>Penyebab</th>
+
                       <th>Action</th>
                     </tr>
                   </thead>
@@ -51,6 +53,8 @@ $this->load->view('_partials/header');
                         <td width="25%"><?= $dat->gejala ?></td>
 
                         <td><?= $dat->kerusakan ?></td>
+                        <td><?= $dat->penyebab ?></td>
+
                         <td><a href="<?= base_url("Admin/Penyebab/gejala/" . $dat->id_gejala) ?>" class="btn btn-primary">Cek Penyebab</a> <a href="<?= base_url("Admin/Gejala/edit/" . $dat->id_gejala) ?>" class="btn btn-warning">Edit</a> <a href="<?= base_url("Admin/Gejala/delete/" . $dat->id_gejala) ?>" class="btn btn-danger">Delete</a></td>
 
                       </tr>
