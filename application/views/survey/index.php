@@ -17,11 +17,11 @@ $this->load->view('_partials/header');
 
             <p class="font-weight-bold uppercase">Silahkan Pilih Jenis Diagnosa Kerusakan</p>
             <div class="form-group">
-              <a href="<?= base_url()?>Survey/gejala" class="btn btn-warning">Diagnosa Berdasarkan Gejala</a>
+              <a href="<?= base_url()?>Survey/gejala" class="btn btn-warning">Diagnosa Diagnosa Berdasarkan Penyebab kerusakan</a>
             </div>
             <div class="form-group">
 
-              <a href="<?= base_url()?>Survey/kerusakan" class="btn btn-primary">Diagnosa Berdasarkan Kerusakan</a>
+              <a href="<?= base_url()?>Survey/kerusakan" class="btn btn-primary">Diagnosa berdasarkan kerusakan dan gejala</a>
 
             </div>
 

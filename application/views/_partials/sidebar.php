@@ -33,8 +33,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  
             <li class="menu-header">Survey</li>
 
-            <li class="dropdown <?php echo $this->uri->segment(2) == 'Users/lap_survey' ? 'active' : ''; ?>">
-            <a class="nav-link" href="<?php echo base_url(); ?>Users/lap_survey"><i class="fas fa-home"></i>  Mulai Survey</a> 
+            <li class="dropdown <?php echo $this->uri->segment(2) == base_url() ? 'active' : ''; ?>">
+            <a class="nav-link" href="<?php echo base_url(); ?>"><i class="fas fa-home"></i>  Mulai Survey</a> 
             <a class="nav-link" href="<?php echo base_url(); ?>/Survey"><i class="fas fa-home"></i>  Laporan Survey</a> 
 
             </li>
